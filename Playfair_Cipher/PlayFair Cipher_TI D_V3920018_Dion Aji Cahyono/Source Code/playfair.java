@@ -57,7 +57,6 @@ public class playfair {
             Point x2=find(msgs[i]);
 
             if(x1.x==x2.x){
-//same row
                 if(x1.y+1==5){
                     x1.y=0;
                 }
@@ -112,7 +111,7 @@ public class playfair {
             Point x1=find(msgs[i++]);
             Point x2=find(msgs[i]);
 
-            if(x1.x==x2.x){   //same row
+            if(x1.x==x2.x){   
                 if(x1.y-1<0){
                     x1.y=4;
                 }
@@ -126,7 +125,7 @@ public class playfair {
                 }
                 buffer.append(matrix[x1.x][x1.y]);
                 buffer.append(matrix[x2.x][x2.y]);
-            }else if(x1.y==x2.y){   //same column
+            }else if(x1.y==x2.y){   
 
                 if(x1.x-1<0){
                     x1.x=4;
@@ -157,7 +156,7 @@ public class playfair {
         }
         return buffer.toString();
     }
-    // function  to return positon of character in matrix
+    // berfungsi untuk mengembalikan posisi karakter dalam matriks
     private Point find(char c){
         Point a=null;
         for (int i=0;i<5;i++) {
